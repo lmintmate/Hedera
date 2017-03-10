@@ -1,0 +1,23 @@
+style"menu"{
+xthickness=1
+ythickness=1
+bg[NORMAL]=@window
+bg[PRELIGHT]=@hilight
+bg[SELECTED]=@hilight
+bg[ACTIVE]=@hilight
+bg[INSENSITIVE]=@window
+engine"murrine"{
+focusstyle=0
+contrast=1.0
+glazestyle=0
+highlight_shade=0.0
+roundness=0
+border_shades={1.0,1.0}
+trough_shades={1.0,1.0}
+reliefstyle=0
+gradient_shades={1.0,1.0,1.0,1.0}
+lightborder_shade=0.0
+shadow_shades={ 0.0, 0.0 }
+border_colors={@hilight,@hilight}
+gradient_colors={@hilight,@hilight,@hilight,@hilight}
+}}class"GtkMenu"style"menu"

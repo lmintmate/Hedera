@@ -1,0 +1,29 @@
+QWidget>QMenuBar {
+font-weight:bold;
+color:#fcfcfc;
+background: #222222;}
+QWidget>QMenuBar::item,
+QWidget>QMenuBar::item:selected {
+color:#fcfcfc;
+background: #222222;}
+QWidget>QMenuBar::item:pressed {
+color:#333333;
+background: #ce99cd;}
+
+QMessageBox,
+QMessageBox QLabel {
+color:#fcfcfc;
+background:#222222;}
+QMessageBox QPushButton{
+border-radius:2px;
+border:1px solid transparent;
+padding:5px;
+color:#fcfcfc;
+background:transparent;}
+QMessageBox QPushButton:hover{
+border-color:#ce99cd;}
+QMessageBox QPushButton:pressed,
+QMessageBox QPushButton:pressed:hover{
+color:#333333;
+background:#ce99cd;
+border-color: #ce99cd;}

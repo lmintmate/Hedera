@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 34 44"
+   width="34"
+   height="44"
+   sodipodi:docname="expander_side-rtl2.svg"
+   inkscape:version="0.92.0 r15299">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="937"
+     inkscape:window-height="480"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="5.3636364"
+     inkscape:cx="17"
+     inkscape:cy="22"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs10" />
+  <g
+     transform="matrix(0,1,1,0,-1004.005,10.14289)"
+     id="layer1">
+    <g
+       transform="matrix(2,0,0,2,-33.85711,-1038.005)"
+       id="g4238">
+      <path
+         id="path5261"
+         d="m 18.02703,1032.5255 -0.60547,-0.6055 5.43555,-5.4355 5.43555,5.4355 -0.60547,0.6055 -4.83008,-4.8301 z"
+         style="color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#fcfcfc;fill-rule:evenodd;stroke-width:0.855479;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

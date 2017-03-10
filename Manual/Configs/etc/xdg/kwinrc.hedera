@@ -1,0 +1,9 @@
+[org.kde.kdecoration2]
+BorderSize=None
+ButtonsOnLeft=
+ButtonsOnRight=IAX
+CloseOnDoubleClickOnMenu=false
+library=org.kde.breeze
+
+[Windows]
+Placement=Centered

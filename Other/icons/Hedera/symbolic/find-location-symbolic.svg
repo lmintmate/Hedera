@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="16"
+   width="16"
+   y="0"
+   x="0"
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="Capa_1">
+  <defs
+     id="defs39" />
+  <g
+     style="fill:#d02604"
+     transform="matrix(0.15893044,0,0,0.16281616,0.23521472,0.09090705)"
+     id="g3">
+    <path
+       id="path5"
+       transform="matrix(6.2920609,0,0,6.1418965,-1.4799853,-0.55834169)"
+       d="m 8,0.09179687 c -3.3080513,0 -6,2.62584723 -6,5.85546873 0,0.8424107 0.1773063,1.646555 0.5253906,2.390625 C 4.0254718,11.542276 6.9001507,14.926266 7.7460938,15.886719 7.8094727,15.958521 7.902763,16 8,16 8.0972368,16 8.190527,15.958521 8.2539062,15.886719 9.0995158,14.926429 11.974028,11.542601 13.474609,8.3378906 13.822861,7.5938206 14,6.7896763 14,5.9472656 13.999666,2.7176441 11.308218,0.09179687 8,0.09179687 Z M 8,3 A 3,3 0 0 1 11,6 3,3 0 0 1 8,9 3,3 0 0 1 5,6 3,3 0 0 1 8,3 Z"
+       style="fill:#fcfcfc;fill-opacity:1;stroke:none;stroke-width:0.16086157" />
+  </g>
+  <g
+     id="g4156"
+     transform="matrix(0.15893044,0,0,0.16281616,0.23521472,0.09090705)"
+     style="fill:none;stroke:#fcfcfc;stroke-width:6.21652508;stroke-miterlimit:4;stroke-dasharray:none" />
+  <metadata
+     id="metadata9999">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sixsixfive (sixsixfive.deviantart.com)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Sixsixfive (sixsixfive.deviantart.com)</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:source>https://github.com/sixsixfive</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>ivy</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>ssf</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Sixsixfive (sixisixfive.deviantart.com)</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:description>A simple icon theme published under CC-BY-SA_V4(http://creativecommons.org/licenses/by-sa/4.0)</dc:description>
+        <dc:identifier>SSF</dc:identifier>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <!--Part of the Ivy icon them published under the CC-BY-SA_V4: http://creativecommons.org/licenses/by-sa/4.0 -->
+</svg>

@@ -1,0 +1,56 @@
+#!/bin/sh
+#set -ex
+if [ -L /etc/gtk-3.0/settings.ini.hedera-bak ]; then
+#    mv -fv /etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini.hedera
+    mv -fv /etc/gtk-3.0/settings.ini.hedera-bak /etc/gtk-3.0/settings.ini
+fi
+if [ -f /etc/xdg/gtk-3.0/settings.ini.hedera-bak ]; then
+    mv -fv /etc/xdg/gtk-3.0/settings.ini.hedera-bak /etc/xdg/gtk-3.0/settings.ini
+fi
+if [ -f /etc/gtk-2.0/gtkrc.hedera-bak ]; then
+#    mv -fv /etc/gtk-2.0/gtkrc /etc/gtk-2.0/gtkrc.hedera
+    mv -fv /etc/gtk-2.0/gtkrc.hedera-bak /etc/gtk-2.0/gtkrc
+fi
+if [ -f /etc/xdg/gtk-2.0/gtkrc.hedera-bak ]; then
+    mv -fv /etc/xdg/gtk-2.0/gtkrc.hedera-bak /etc/xdg/gtk-2.0/gtkrc
+fi
+if [ -f /etc/xdg/Trolltech.conf.hedera-bak ]; then
+#    mv -fv /etc/xdg/Trolltech.conf /etc/xdg/Trolltech.conf.hedera
+    mv -fv /etc/xdg/Trolltech.conf.hedera-bak /etc/xdg/Trolltech.conf
+fi
+if [ -f /etc/xdg/breezerc.hedera-bak ]; then
+#    mv -fv /etc/xdg/breezerc /etc/xdg/breezerc.hedera
+    mv -fv /etc/xdg/breezerc.hedera-bak /etc/xdg/breezerc
+fi
+if [ -f /etc/xdg/kwinrc.hedera-bak ]; then
+#    mv -fv /etc/xdg/kwinrc /etc/xdg/kwinrc.hedera
+    mv -fv /etc/xdg/kwinrc.hedera-bak /etc/xdg/kwinrc
+fi
+if [ -f /etc/xdg/kdeglobals.hedera-bak ]; then
+#    mv -fv /etc/xdg/kdeglobals /etc/xdg/kdeglobals.hedera
+    mv -fv /etc/xdg/kdeglobals.hedera-bak /etc/xdg/kdeglobals
+fi
+if [ ! -f /usr/share/kf5/infopage/body-background.png ]; then
+	if [ -d /usr/share/kf5/infopage.hedera-bak ]; then
+		mv  -fv /usr/share/kf5/infopage /usr/share/kf5/infopage.hedera
+		mv  -fv /usr/share/kf5/infopage.hedera-bak /usr/share/kf5/infopage
+	fi
+else
+	rm -rf /usr/share/kf5/infopage.hedera-bak
+fi
+if [ ! -f /usr/share/kde4/apps/kdeui/about/body-background.png ]; then
+	if [ -d /usr/share/kde4/apps/kdeui/about.hedera-bak ]; then
+		mv -fv /usr/share/kde4/apps/kdeui/about /usr/share/kde4/apps/kdeui/about.hedera
+		mv -fv /usr/share/kde4/apps/kdeui/about.hedera-bak /usr/share/kde4/apps/kdeui/about
+	fi
+else
+	rm -rf /usr/share/kde4/apps/kdeui/about.hedera-bak
+fi
+if [ -L /usr/share/YaST2/theme/current/icons.hedera-bak ]; then
+    rm -f /usr/share/YaST2/theme/current/icons
+    mv -fv /usr/share/YaST2/theme/current/icons.hedera-bak /usr/share/YaST2/theme/current/icons
+fi
+if [ -L /usr/share/themes/Hedera/gtk-3.0 ]; then
+		rm -f /usr/share/themes/Hedera/gtk-3.0
+fi
+exit 0

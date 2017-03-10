@@ -1,0 +1,42 @@
+### this is only here because of the broken color loading in xfce4.12
+gtk-color-scheme = "bg_color:#fcfcfc\nselected_bg_color:#ce99cd\nfg_color:#333333"
+################################################################################
+###colors
+include "../gtk-2.0/theme/colors.ini"
+###main stuff
+include "../gtk-2.0/theme/allr.c"
+###widgets
+include "../gtk-2.0/theme/arrowsr.c"
+include "../gtk-2.0/theme/menur.c"
+include "../gtk-2.0/theme/menuitemr.c"
+include "../gtk-2.0/theme/toolbarr.c"
+include "../gtk-2.0/theme/buttonr.c"
+include "../gtk-2.0/theme/checkboxr.c"
+include "../gtk-2.0/theme/radioboxr.c"
+include "../gtk-2.0/theme/expanderr.c"
+include "../gtk-2.0/theme/progressbarr.c"
+include "../gtk-2.0/theme/entryr.c"
+include "../gtk-2.0/theme/scrolledwindowr.c"
+include "../gtk-2.0/theme/scaler.c"
+include "../gtk-2.0/theme/scrollbarr.c"
+include "../gtk-2.0/theme/tootipr.c"
+include "../gtk-2.0/theme/framer.c"
+include "../gtk-2.0/theme/spinbuttonr.c"
+include "../gtk-2.0/theme/notebookr.c"
+include "../gtk-2.0/theme/treeviewr.c"
+include "../gtk-2.0/theme/iconviewsr.c"
+include "../gtk-2.0/theme/pathbarr.c"
+include "../gtk-2.0/theme/separatorr.c"
+###app specific stff
+include "../gtk-2.0/theme/dialogsr.c"
+include "../gtk-2.0/theme/gimpr.c"
+include "../gtk-2.0/theme/xfcer.c"
+include "../gtk-2.0/theme/xfcepanelr.c"
+####fixes
+include "../gtk-2.0/theme/iconandfontfixesr.c"
+####settings
+include "settings.ini"
+####Docs
+## https://wiki.gnome.org/Attic/GnomeArt/Tutorials/GtkThemes
+## https://wiki.gnome.org/Attic/GnomeArt/Tutorials/GtkEngines/PixmapEngine
+## https://developer.gnome.org/gtk2/stable/index.html

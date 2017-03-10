@@ -1,0 +1,39 @@
+#!/bin/sh
+#set -ex
+readlinkandremove() {
+	if [ -L $_file ]; then
+		if [ "$(readlink $_file)" = "${_file}.hedera" ]; then
+			rm -f $_file
+		fi
+		##may some packages were already removed or have changed....
+		if [ -f /etc/debian_version ]; then
+			$(dpkg -S $_file >/dev/null 2>&1||rm -f $_file)
+		else
+			$(rpm -qf $_file >/dev/null 2>&1||rm -f $_file)
+		fi
+	fi
+}
+
+_file=/etc/xdg/breezerc
+readlinkandremove
+_file=/etc/xdg/kwinrc
+readlinkandremove
+_file=/etc/xdg/Trolltech.conf
+readlinkandremove
+_file=/etc/xdg/kdeglobals
+readlinkandremove
+_file=/etc/gtk-2.0/gtkrc
+readlinkandremove
+_file=/etc/gtk-3.0/settings.ini
+readlinkandremove
+_file=/usr/share/plank/themes/Hedera
+readlinkandremove
+#maybe some packages have been already removed
+if [ -f /etc/debian_version ]; then
+	$(dpkg -S /usr/share/kf5/infopage >/dev/null 2>&1||rm -rf /usr/share/kf5/infopage)
+	$(dpkg -S /usr/share/kde4/apps/kdeui/about >/dev/null 2>&1||rm -rf /usr/share/kde4/apps/kdeui/about)
+else
+	$(rpm -qf /usr/share/kf5/infopage >/dev/null 2>&1||rm -rf /usr/share/kf5/infopage)
+	$(rpm -qf /usr/share/kde4/apps/kdeui/about >/dev/null 2>&1||rm -rf /usr/share/kde4/apps/kdeui/about)
+fi
+exit 0

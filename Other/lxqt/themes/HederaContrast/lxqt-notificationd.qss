@@ -1,0 +1,25 @@
+Notification {
+	border:1px solid #161616;
+	background:rgba(54,54,54,0.99);
+	border-radius:2px;}
+
+QLabel {
+	color:#9c9c9c;}
+
+#appLabel,
+#summaryLabel {
+	font:bold;}
+
+#appLabel{
+    color:rgb(226,112,162);
+    margin-bottom:5px;}
+
+#closeButton {
+	qproperty-iconSize:22px;
+	border: none;
+	qproperty-icon: url(images/close.svg);}
+
+Notification QPushButton {
+	padding:2px;
+	background:#262626;
+	color:#9c9c9c;}

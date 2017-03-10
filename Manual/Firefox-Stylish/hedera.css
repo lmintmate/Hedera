@@ -1,0 +1,28 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.menubar-text {
+-moz-appearance:none!important;
+font-weight:normal!important;
+color:#fcfcfc!important;}
+
+menu:active .menubar-text,
+menu[open="true"] .menubar-text{
+-moz-appearance:none!important;
+font-weight: normal!important;
+color:#333333!important;}
+
+#main-window .tabbrowser-tabs tab:not([selected="true"]) {
+-moz-appearance:none!important;
+background-image:none!important;
+color:#787878!important;}
+
+#TabsToolbar .tab-background-start:not([selected="true"]),
+#TabsToolbar .tab-background-end:not([selected="true"]),
+#TabsToolbar .tab-background-middle:not([selected="true"]),
+#TabsToolbar .tab-background:not([selected="true"]),
+.tabbrowser-tab::after, 
+.tabbrowser-tab::before {
+opacity:0!important;}
+
+#TabsToolbar #new-tab-button, .tabs-newtab-button {
+display:none!important;}

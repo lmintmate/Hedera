@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="44"
+   height="44"
+   viewBox="0 0 11.641666 11.641667"
+   id="svg2"
+   version="1.1">
+  <defs
+     id="defs4">
+    <style
+       type="text/css"
+       id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#31363b;
+        stop-color:#31363b;
+      }
+      .ColorScheme-Background {
+        color:#eff0f1;
+        stop-color:#eff0f1;
+      }
+      .ColorScheme-Highlight {
+        color:#3daee9;
+        stop-color:#3daee9;
+      }
+      .ColorScheme-ViewText {
+        color:#31363b;
+        stop-color:#31363b;
+      }
+      .ColorScheme-ViewBackground {
+        color:#fcfcfc;
+        stop-color:#fcfcfc;
+      }
+      .ColorScheme-ViewHover {
+        color:#93cee9;
+        stop-color:#93cee9;
+      }
+      .ColorScheme-ViewFocus{
+        color:#3daee9;
+        stop-color:#3daee9;
+      }
+      .ColorScheme-ButtonText {
+        color:#31363b;
+        stop-color:#31363b;
+      }
+      .ColorScheme-ButtonBackground {
+        color:#eff0f1;
+        stop-color:#eff0f1;
+      }
+      .ColorScheme-ButtonHover {
+        color:#93cee9;
+        stop-color:#93cee9;
+      }
+      .ColorScheme-ButtonFocus{
+        color:#3daee9;
+        stop-color:#3daee9;
+      }
+      </style>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="fill:#000000;opacity:0.8"
+     id="layer1"
+     transform="translate(-11.641649,-261.54584)">
+    <g
+       style="fill:#000000"
+       id="up-arrow"
+       transform="translate(3.7041489,-0.26458334)">
+      <g
+         style="fill:#000000"
+         id="layer1-6"
+         transform="matrix(0.26458334,0,0,0.26458334,7.7107299,-8.7274511)">
+        <g
+           style="fill:#000000"
+           id="g4238">
+          <path
+             style="color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#000000;fill-rule:evenodd;stroke-width:0.855479;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto"
+             d="m 18.02703,1032.5255 -0.60547,-0.6055 5.43555,-5.4355 5.43555,5.4355 -0.60547,0.6055 -4.83008,-4.8301 -4.83008,4.8301 z"
+             id="path5261" />
+        </g>
+      </g>
+      <rect
+         transform="scale(-1,-1)"
+         style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4140"
+         width="3.7041667"
+         height="3.7041702"
+         x="-15.610416"
+         y="-265.51456" />
+    </g>
+    <g
+       style="fill:#000000"
+       transform="matrix(0,-1,1,0,-250.16872,281.12501)"
+       id="left-arrow">
+      <g
+         style="fill:#000000"
+         transform="matrix(0.26458334,0,0,0.26458334,7.7107299,-8.7274511)"
+         id="g4257">
+        <g
+           style="fill:#000000"
+           id="g4259">
+          <path
+             id="path4261"
+             d="m 18.02703,1032.5255 -0.60547,-0.6055 5.43555,-5.4355 5.43555,5.4355 -0.60547,0.6055 -4.83008,-4.8301 -4.83008,4.8301 z"
+             style="color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#000000;fill-rule:evenodd;stroke-width:0.855479;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto" />
+        </g>
+      </g>
+      <rect
+         y="-265.51456"
+         x="-15.610416"
+         height="3.7041702"
+         width="3.7041667"
+         id="rect4263"
+         style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+         transform="scale(-1,-1)" />
+    </g>
+    <g
+       style="fill:#000000"
+       id="right-arrow"
+       transform="matrix(0,-1,-1,0,285.09372,281.12501)">
+      <g
+         style="fill:#000000"
+         id="g4267"
+         transform="matrix(0.26458334,0,0,0.26458334,7.7107299,-8.7274511)">
+        <g
+           style="fill:#000000"
+           id="g4269">
+          <path
+             style="color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#000000;fill-rule:evenodd;stroke-width:0.855479;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto"
+             d="m 18.02703,1032.5255 -0.60547,-0.6055 5.43555,-5.4355 5.43555,5.4355 -0.60547,0.6055 -4.83008,-4.8301 -4.83008,4.8301 z"
+             id="path4271" />
+        </g>
+      </g>
+      <rect
+         transform="scale(-1,-1)"
+         style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4273"
+         width="3.7041667"
+         height="3.7041702"
+         x="-15.610416"
+         y="-265.51456" />
+    </g>
+    <g
+       style="fill:#000000"
+       transform="matrix(1,0,0,-1,3.7041489,534.99786)"
+       id="down-arrow">
+      <g
+         style="fill:#000000"
+         transform="matrix(0.26458334,0,0,0.26458334,7.7107299,-8.7274511)"
+         id="g4277">
+        <g
+           style="fill:#000000"
+           id="g4279">
+          <path
+             id="path4281"
+             d="m 18.02703,1032.5255 -0.60547,-0.6055 5.43555,-5.4355 5.43555,5.4355 -0.60547,0.6055 -4.83008,-4.8301 -4.83008,4.8301 z"
+             style="color:#000000;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#000000;fill-rule:evenodd;stroke-width:0.855479;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto" />
+        </g>
+      </g>
+      <rect
+         y="-265.51456"
+         x="-15.610416"
+         height="3.7041702"
+         width="3.7041667"
+         id="rect4283"
+         style="opacity:0;fill:#000000;fill-opacity:1;stroke:none"
+         transform="scale(-1,-1)" />
+    </g>
+  </g>
+</svg>

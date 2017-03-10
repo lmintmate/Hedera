@@ -1,0 +1,80 @@
+# Name: Hedera
+# Author: sxsixfive <sixsixfive.deviantart.com>
+
+# Menu settings
+menu.title.bg: Flat Solid
+menu.title.bg.color: #ece8e2
+menu.title.text.color: #333333
+menu.title.text.justify: left
+
+menu.items.bg: Flat Solid
+menu.items.bg.color: #ece8e2
+menu.items.text.color: #333333
+menu.items.disabled.text.color: #a5a5a5
+
+menu.items.active.bg: Flat Solid
+menu.items.active.bg.color: #ce99cd
+menu.items.active.text.color: #333333
+menu.separator.color: #b1aeaa
+
+# Window settings (focused)
+window.active.title.bg: Flat Solid
+window.active.title.bg.color: #ece8e2
+
+window.active.label.bg: Parentrelative
+window.active.label.text.color: #333333
+
+window.active.handle.bg: Flat Solid
+window.active.handle.bg.color: #ece8e2
+
+window.active.grip.bg: Flat Solid
+window.active.grip.bg.color: #ece8e2
+
+window.active.button.*.bg  : parentrelative
+window.active.button.*.image.color: #333333
+window.active.button.*.hover.image.color: #333333
+window.active.button.*.pressed.image.color: #916c90
+window.active.button.close.hover.image.color: #ff98a2
+window.active.button.close.pressed.image.color: #da4453
+
+window.active.border.color: #ece8e2
+window.active.title.separator.color: #ece8e2
+window.active.client.color: #ece8e2
+# Window settings (unfocused)
+window.inactive.title.bg: Flat Solid
+window.inactive.title.bg.color: #ece8e2
+
+window.inactive.label.bg: Parentrelative
+window.inactive.label.text.color: #a5a5a5
+
+window.inactive.handle.bg: Flat Solid
+window.inactive.handle.bg.color: #ece8e2
+
+window.inactive.grip.bg: Flat Solid
+window.inactive.grip.bg.color: #ece8e2
+
+window.inactive.button.*.bg: parentrelative
+window.inactive.button.*.image.color : #a5a5a5
+window.inactive.button.*.hover.image.color: #a5a5a5
+window.inactive.button.*.pressed.image.color: #cdcdcd
+window.active.button.close.hover.image.color: #ff98a2
+window.active.button.close.pressed.image.color: #da4453
+
+window.inactive.border.color: #ece8e2
+window.inactive.title.separator.color: #ece8e2
+window.inactive.client.color: #ece8e2
+
+### Everything else
+border.width: 0
+padding.width: 2
+window.handle.width: 0
+window.client.padding.width: 0
+window.label.text.justify: Center
+menu.overlap: 0
+
+### Fonts
+window.active.label.text.font:Noto Sans:Bold:pixelsize=12:shadow=n:shadowtint=0:shadowoffset=0
+window.inactive.label.text.font:Noto Sans:Bold:pixelsize=12:shadow=n:shadowtint=0:shadowoffset=0
+menu.title.text.font=Noto Sans:pixelsize=11:shadow=n:shadowtint=0:shadowoffset=0
+osd.label.text.font=Noto Sans:pixelsize=11:shadow=n:shadowtint=0:shadowoffset=0
+menu.items.font=Noto Sans:pixelsize=11:shadow=n:shadowtint=0:shadowoffset=0

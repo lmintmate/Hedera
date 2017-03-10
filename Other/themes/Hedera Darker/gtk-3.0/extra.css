@@ -1,0 +1,49 @@
+menubar {
+margin:-1px;
+color:@darktext;
+background:@darkbg;}
+menubar>menuitem>label,
+menubar>menuitem>label:backdrop {
+font-weight:bold;
+color:@darktext;}
+menubar>menuitem:hover>label {
+color:@windowtext;}
+
+messagedialog.background,
+messagedialog.background:backdrop,
+messagedialog box,
+messagedialog box:backdrop {
+color:@darktext;
+background:@darkbg;}
+messagedialog label,
+messagedialog label:backdrop {
+color:@darktext;}
+messagedialog button,
+messagedialog button:backdrop{
+margin:1px;
+min-width:22px;
+min-height:22px;
+box-shadow:none;
+background:transparent;
+border:1px solid transparent;}
+messagedialog button:hover,
+messagedialog button:focus{
+box-shadow:none;
+background:transparent;
+border-color:@hilight;}
+messagedialog button:checked,
+messagedialog button:active{
+color:@windowtext;
+box-shadow:none;
+background:@hilight;
+border-color: @hilight;}
+messagedialog button:checked label,
+messagedialog button:active label{
+background:@hilight;
+color:@windowtext;}
+
+/*this hopefully only themes the xfce titled dialogs
+dialog.background>box.vertical:nth-child(2) widget:first-child:not(.frame):not(.horizontal),
+dialog.background>box.vertical:nth-child(2) widget:first-child:backdrop:not(.frame):not(.horizontal) {
+color:@darktext;
+background:@darkbg;}*/

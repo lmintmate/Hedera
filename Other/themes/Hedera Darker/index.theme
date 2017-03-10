@@ -1,0 +1,37 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Hedera Darker
+Name[de]=Efeu (Dunkler)
+Name[ar]=(Darker) اللبلاب
+Name[ca]=Heura (Darker)
+Name[cs]=Břečťan (Darker)
+Name[da]=Vedbend (Darker)
+Name[el]=Κισσός (Darker)
+Name[en]=Ivy (Darker)
+Name[es]=Hiedra (Contraste)
+Name[fr]=Lierre (Darker)
+Name[gd]=Eidheann (Darker)
+Name[it]=Edera (Darker)
+Name[ja]=ツタ (Darker)
+Name[la]=Hedera (Darker)
+Name[lu]=Wantergréng (Darker)
+Name[nl]=Klimop (Darker)
+Name[pt]=Hera (Darker)
+Name[ru]=Плющ (Darker)
+Name[sv]=Murgröna (Darker)
+Name[zh]=常春藤 (Darker)
+Comment=Even more dark stuff, the Qt style needs qt5ct!
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Hedera Darker
+MetacityTheme=Hedera Darker
+IconTheme=Hedera
+CursorTheme=Breeze
+CursorSize=24
+NotificationTheme=Slider
+MonospaceFont=Noto Mono 10
+ApplicationFont=Noto Sans 10
+DesktopFont=Noto Sans Bold 10
+BackgroundImage=/usr/share/themes/Hedera/basicwp.png
+ButtonLayout=:minimize,maximize,close

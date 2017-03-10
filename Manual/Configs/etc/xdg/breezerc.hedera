@@ -1,0 +1,16 @@
+[Common]
+ShadowSize=20
+ShadowStrength=102
+
+[Style]
+ScrollBarAddLineButtons=2
+ScrollBarSubLineButtons=0
+SidePanelDrawFrame=true
+SliderDrawTickMarks=false
+SplitterProxyEnabled=false
+ToolBarDrawItemSeparator=false
+ViewDrawFocusIndicator=false
+
+[Windeco]
+DrawBackgroundGradient=false
+DrawSizeGrip=false

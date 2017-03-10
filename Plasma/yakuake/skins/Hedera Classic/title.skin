@@ -1,0 +1,64 @@
+[Description]
+Skin=Hedera Classic
+Skin[de]=Efeu (Classic)
+Skin[ar]=(Classic) اللبلاب
+Skin[ca]=Heura (Classic)
+Skin[cs]=Břečťan (Classic)
+Skin[da]=Vedbend (Classic)
+Skin[el]=Κισσός (Classic)
+Skin[en]=Ivy (Classic)
+Skin[es]=Hiedra (Classic)
+Skin[fr]=Lierre (Classic)
+Skin[gd]=Eidheann (Classic)
+Skin[it]=Edera (Classic)
+Skin[ja]=ツタ (Classic)
+Skin[la]=Hedera (Classic)
+Skin[lu]=Wantergréng (Classic)
+Skin[nl]=Klimop (Classic)
+Skin[pt]=Hera (Classic)
+Skin[ru]=Плющ (Classic)
+Skin[sv]=Murgröna (Classic)
+Skin[zh]=常春藤 (Classic)
+Author=SSF
+Email=
+Icon=/icon.png
+
+[Border]
+red=0
+green=0
+blue=0
+width=0
+
+[Text]
+x=5
+y=18
+red=51
+green=51
+blue=51
+text=Yakuake
+
+[Background]
+back_image=/img/tb.png
+left_corner=/img/left.png
+right_corner=/img/right.png
+
+[FocusButton]
+x=71
+y=1
+up_image=/img/top-active.png
+over_image=/img/top-active-prelight.png
+down_image=/img/top-active-pressed.png
+
+[ConfigButton]
+x=48
+y=1
+up_image=/img/menu-active.png
+over_image=/img/menu-active-prelight.png
+down_image=/img/menu-active-pressed.png
+
+[QuitButton]
+x=23
+y=1
+up_image=/img/close-active.png
+over_image=/img/close-active-prelight.png
+down_image=/img/close-active-pressed.png

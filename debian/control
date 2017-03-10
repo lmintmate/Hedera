@@ -1,0 +1,21 @@
+Source: hedera
+Section: x11
+Priority: optional
+Maintainer: SSF <https://github.com/sixsixfive>
+Build-Depends: libfile-fcntllock-perl, sed, debhelper (>= 7) 
+Standards-Version: 3.9.6
+
+Package: hedera
+Architecture: all
+#### dont install on ancient gtk3 releases or kde4
+Conflicts: libgtk-3-0 (<<3.20), plasma-desktop (<<4:5)
+Replaces: hedera
+#### depend on breeze & noto
+Depends: breeze-cursor-theme, fonts-noto-hinted, fonts-noto-mono, hicolor-icon-theme
+#### stuff that is needed by a few themes add some useful stuff like xsettingsd
+Recommends: kde-style-breeze, kde-style-breeze-qt4, libgtk-3-0 (>=3.20), gtk2-engines, gtk2-engines:i386, gtk2-engines-murrine, gtk2-engines-murrine:i386, gtk2-engines-pixbuf, gtk2-engines-pixbuf:i386, gtk3-nocsd, libgtk3-nocsd0:i386, qt5ct, qt4-qtconfig, xsettings-kde, xsettingsd, task-desktop, gtk-update-icon-cache
+#### suggest apps or pkgs with themes
+Suggests: slim | lightdm-gtk-greeter, qterminal | konsole | xfce4-terminal | yakuake, google-chrome-stable | google-chrome-beta | google-chrome-unstable | chromium | qupzilla | firefox | firefox-esr, kwin-style-breeze | openbox | xfwm4 | marco | muffin | metacity, plank, xfce4-notifyd, albert, light-locker, xfdashboard, onboard, xfce4-windowck-plugin, engrampa | ark | unp, mate-polkit-bin | polkit-kde-agent-1, atril | qpdfview | okular | mupdf, ceni | connman-ui | cmst
+#### try to save some space and kill other suggests but don't break meta packages, breaks gdebi install but who cares about that...
+Provides: gnome-icon-theme, lxde-icon-theme, tango-icon-theme, gnome-themes-standard, gnome-themes-standard-data, mate-themes, mate-icon-theme, xfwm4-themes, gtk3-engines-xfce, gtk2-engines-xfce, murrine-themes
+Description: Simple and Eye-Friendly GUIKit for Plasma or Xfce

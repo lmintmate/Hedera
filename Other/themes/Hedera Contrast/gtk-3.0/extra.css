@@ -1,0 +1,260 @@
+window>image:backdrop,
+window>image{
+color:@darktext;
+-gtk-icon-style:symbolic;}
+toolbar image,
+button image,
+dialog image,
+row image,
+list image,
+iconview image
+revealer image,
+window>grid image,
+window>box image,
+window>paned image,
+menuitem image,
+popover image,
+toolbar image:backdrop,
+button image:backdrop,
+dialog image:backdrop,
+row image:backdrop,
+list image:backdrop,
+iconview image:backdrop
+revealer image:backdrop,
+window>grid image:backdrop,
+window>box image:backdrop,
+window>paned image:backdrop,
+menuitem image:backdrop,
+popover image:backdrop{
+color:@windowtext;
+-gtk-icon-style:regular;}
+
+UnityPanelWidget,
+.unity-panel,
+UnityPanelWidget:backdrop,
+.unity-panel:backdrop,
+#XfcePanelWindowWrapper,
+.xfce4-panel > widget > button,
+#xfce-panel-button,
+.xfce4-panel > widget > button:checked,
+.xfce4-panel > widget > button:active,
+#xfce-panel-button:checked,
+#xfce-panel-button:active,
+PanelToplevel.background,
+.mate-panel-menu-bar grid,
+#PanelPlug,
+.mate-panel-menu-bar menubar>menuitem>label,
+.mate-panel-menu-bar menubar:backdrop>menuitem>label,
+#PanelPlug label,
+#PanelApplet > button > label {
+background:@darkbg;
+color:@darktext;}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem *:hover,
+.unity-panel.menubar:hover,
+.unity-panel .menubar:hover,
+.mate-panel-menu-bar menubar>menuitem:hover>label,
+.mate-panel-menu-bar menubar:backdrop>menuitem:hover>label,
+#clock-applet-button:checked label,
+.mate-panel-menu-bar #tasklist-button:active *,
+.mate-panel-menu-bar #tasklist-button:checked * {
+transition:none;
+background:@hilight;
+color:@windowtext;}
+.mate-panel-menu-bar #tasklist-button:hover * {
+transition:none;
+color:@windowtext;
+background-color:shade(@hilight,1.2);}
+#XfcePanelWindowWrapper button>image,
+#XfcePanelWindowWrapper button,
+#XfcePanelWindowWrapper image{
+color:@darktext;
+-gtk-icon-style:symbolic;}
+.mate-panel-menu-bar #tasklist-button>box>image{
+opacity:0;}
+na-tray-applet>widget>box{
+padding:2px;
+color:@darktext;
+-gtk-icon-style:symbolic;}
+
+/*headerbars + titlebars*/
+UnityDecoration .top,
+headerbar.default-decoration,
+.default-decoration,
+.default-decoration *,
+.default-decoration.titlebar:not(headerbar),
+.default-decoration.titlebar:not(headerbar) *{
+background-color:@darkbg;
+color:@darktext;}
+UnityDecoration .top:backdrop,
+headerbar.default-decoration:backdrop,
+.default-decoration:backdrop,
+.default-decoration *:backdrop,
+.default-decoration.titlebar:not(headerbar):backdrop,
+.default-decoration.titlebar:not(headerbar) *:backdrop{
+background-color:@darkbg;
+color:@darkinactivetext;}
+.csd > headerbar.titlebar {
+box-shadow: none;
+background-color:@darkbg;
+color:@darktext;}
+.csd > headerbar.titlebar *{
+color:@darktext;
+-gtk-icon-style:symbolic;}
+.csd > headerbar.titlebar *:backdrop{
+color:@darkinactivetext;}
+.csd > headerbar.titlebar menuitem>label{
+color:@windowtext;}
+.csd > headerbar.titlebar menuitem>label:backdrop{
+color:@inactivewindowtext;}
+.csd > headerbar.titlebar scale trough,
+.csd > headerbar.titlebar:backdrop scale  trough{
+background-color:shade(@darkbg,1.6);
+color:@darktext;}
+.csd > headerbar.titlebar:backdrop scale highlight{
+background:@hilight2;}
+.csd > headerbar.titlebar scale slider{
+background-color:@hilight2;
+border-color:alpha(@border,2.2);
+color:@darktext;}
+.csd > headerbar.titlebar .stack-switcher>button:first-child,
+.csd > headerbar.titlebar .stack-switcher>button,
+.csd > headerbar.titlebar .stack-switcher>button:backdrop,
+.csd > headerbar.titlebar .stack-switcher>button:backdrop:first-child,
+.csd > headerbar.titlebar .stack-switcher>button:first-child:hover,
+.csd > headerbar.titlebar .stack-switcher>button:hover,
+.csd > headerbar.titlebar .stack-switcher>button:first-child:checked,
+.csd > headerbar.titlebar .stack-switcher>button:checked,
+.csd > headerbar.titlebar .stack-switcher>button:first-child:checked:hover,
+.csd > headerbar.titlebar .stack-switcher>button:checked:hover,
+.csd > headerbar.titlebar .stack-switcher>button:first-child:active:hover,
+.csd > headerbar.titlebar .stack-switcher>button:active:hover{
+box-shadow:-4px 0px 0px 0px @border,-3px 0px 0px 0px @darkbg,3px 0px 0px 0px @darkbg;}
+.csd > headerbar.titlebar .stack-switcher>button:backdrop:last-child,
+.csd > headerbar.titlebar .stack-switcher>button:last-child,
+.csd > headerbar.titlebar .stack-switcher>button:last-child:hover,
+.csd > headerbar.titlebar .stack-switcher>button:last-child:checked,
+.csd > headerbar.titlebar .stack-switcher>button:last-child:checked:hover,
+.csd > headerbar.titlebar .stack-switcher>button:last-child:active:hover{
+box-shadow:-4px 0px 0px 0px @border,-3px 0px 0px 0px @darkbg,4px 0px 0px 0px @border,3px 0px 0px 0px @darkbg;}
+.csd > headerbar.titlebar label,
+.csd > headerbar.titlebar label.title,
+.csd > headerbar.titlebar label.subtitle{
+color:@darktext;}
+.csd > headerbar.titlebar label:backdrop,
+.csd > headerbar.titlebar label.title:backdrop,
+.csd > headerbar.titlebar label.subtitle:backdrop{
+color:@darkinactivetext;}
+.default-decoration button.minimize.titlebutton,
+.csd > headerbar .right button.minimize.titlebutton,
+.csd > headerbar .right:dir(rtl) button.minimize.titlebutton,
+.csd > headerbar .left button.minimize.titlebutton,
+.csd > headerbar .left:dir(rtl) button.minimize.titlebutton {
+background-image:-gtk-scaled(url("img/dark_wm-min.svg"),url("img/dark_wm-min2.svg"));}
+.default-decoration button.minimize.titlebutton:hover,
+.csd > headerbar .right button.minimize.titlebutton:hover,
+.csd > headerbar .right:dir(rtl) button.minimize.titlebutton:hover,
+.csd > headerbar .left button.minimize.titlebutton:hover,
+.csd > headerbar .left:dir(rtl) button.minimize.titlebutton:hover {
+background-image:-gtk-scaled(url("img/dark_wm-min_prelight.svg"),url("img/dark_wm-min_prelight2.svg"));}
+.default-decoration button.minimize.titlebutton:active,
+.default-decoration button.minimize.titlebutton:checked,
+.csd > headerbar .right button.minimize.titlebutton:active,
+.csd > headerbar .right:dir(rtl) button.minimize.titlebutton:active,
+.csd > headerbar .left button.minimize.titlebutton:active,
+.csd > headerbar .left:dir(rtl) button.minimize.titlebutton:active,
+.csd > headerbar .right button.minimize.titlebutton:checked,
+.csd > headerbar .right:dir(rtl) button.minimize.titlebutton:checked,
+.csd > headerbar .left button.minimize.titlebutton:checked,
+.csd > headerbar .left:dir(rtl) button.minimize.titlebutton:checked {
+background-image:-gtk-scaled(url("img/dark_wm-min_prelight.svg"),url("img/dark_wm-min_prelight2.svg"));
+opacity:0.5;}
+.default-decoration button.maximize.titlebutton,
+.csd > headerbar .right button.maximize.titlebutton,
+.csd > headerbar .right:dir(rtl) button.maximize.titlebutton,
+.csd > headerbar .left button.maximize.titlebutton,
+.csd > headerbar .left:dir(rtl) button.maximize.titlebutton {
+background-image:-gtk-scaled(url("img/dark_wm-max.svg"),url("img/dark_wm-max2.svg"));}
+.default-decoration button.maximize.titlebutton:hover,
+.csd > headerbar .right button.maximize.titlebutton:hover,
+.csd > headerbar .right:dir(rtl) button.maximize.titlebutton:hover,
+.csd > headerbar .left button.maximize.titlebutton:hover,
+.csd > headerbar .left:dir(rtl) button.maximize.titlebutton:hover {
+background-image:-gtk-scaled(url("img/dark_wm-max_prelight.svg"),url("img/dark_wm-max_prelight2.svg"));}
+.default-decoration button.maximize.titlebutton:active,
+.default-decoration button.maximize.titlebutton:checked,
+.csd > headerbar .right button.maximize.titlebutton:active,
+.csd > headerbar .right:dir(rtl) button.maximize.titlebutton:active,
+.csd > headerbar .left button.maximize.titlebutton:active,
+.csd > headerbar .left:dir(rtl) button.maximize.titlebutton:active,
+.csd > headerbar .right button.maximize.titlebutton:checked,
+.csd > headerbar .right:dir(rtl) button.maximize.titlebutton:checked,
+.csd > headerbar .left button.maximize.titlebutton:checked,
+.csd > headerbar .left:dir(rtl) button.maximize.titlebutton:checked {
+background-image:-gtk-scaled(url("img/dark_wm-max_prelight.svg"),url("img/dark_wm-max_prelight2.svg"));
+opacity:0.5;}
+.default-decoration button.close.titlebutton,
+.csd > headerbar .right button.close.titlebutton,
+.csd > headerbar .right:dir(rtl) button.close.titlebutton,
+.csd > headerbar .left button.close.titlebutton,
+.csd > headerbar .left:dir(rtl) button.close.titlebutton {
+background-image:-gtk-scaled(url("img/dark_wm-close.svg"),url("img/dark_wm-close2.svg"));}
+.default-decoration button.close.titlebutton:hover,
+.csd > headerbar .right button.close.titlebutton:hover,
+.csd > headerbar .right:dir(rtl) button.close.titlebutton:hover,
+.csd > headerbar .left button.close.titlebutton:hover,
+.csd > headerbar .left:dir(rtl) button.close.titlebutton:hover {
+background-image:-gtk-scaled(url("img/wm-close_prelight.svg"),url("img/wm-close_prelight2.svg"));}
+.default-decoration button.close.titlebutton:active,
+.default-decoration button.close.titlebutton:checked,
+.csd > headerbar .right button.close.titlebutton:active,
+.csd > headerbar .right:dir(rtl) button.close.titlebutton:active,
+.csd > headerbar .left button.close.titlebutton:active,
+.csd > headerbar .left:dir(rtl) button.close.titlebutton:active,
+.csd > headerbar .right button.close.titlebutton:checked,
+.csd > headerbar .right:dir(rtl) button.close.titlebutton:checked,
+.csd > headerbar .left button.close.titlebutton:checked,
+.csd > headerbar .left:dir(rtl) button.close.titlebutton:checked {
+background-image:-gtk-scaled(url("img/wm-close_pressed.svg"),url("img/wm-close_pressed2.svg"));}
+.csd > headerbar arrow.left{
+min-height:16px;
+min-width:16px;
+-gtk-icon-source:-gtk-scaled(url("img/dark_arrow_down.svg"),url("img/dark_arrow_down2.svg"));
+-gtk-icon-transform:rotate(0.25turn);}
+.csd > headerbar arrow.right{
+min-height:16px;
+min-width:16px;
+-gtk-icon-source:-gtk-scaled(url("img/dark_arrow_down.svg"),url("img/dark_arrow_down2.svg"));
+-gtk-icon-transform:rotate(0.75turn);}
+.csd > headerbar combobox button arrow,
+.csd > headerbar image#gtk-toolbar-arrow{
+-gtk-icon-source:none;
+min-height:16px;
+min-width:16px;
+background-image:-gtk-scaled(url("img/dark_arrow_down.svg"),url("img/dark_arrow_down2.svg"));
+background-repeat:no-repeat;
+background-position:50% 50%;}
+.csd > headerbar arrow,
+.csd > headerbar button arrow,
+.csd > headerbar arrow.bottom{
+min-height:16px;
+min-width:16px;
+-gtk-icon-source:-gtk-scaled(url("img/dark_arrow_down.svg"),url("img/dark_arrow_down2.svg"));}
+.csd > headerbar .linked.path-bar button.text-button,
+.csd > headerbar .linked.path-bar button.text-button:hover {
+background-repeat: no-repeat;
+background-position:left center;
+background-image:-gtk-scaled(url("img/dark_expander_side.svg"),url("img/dark_expander_side2.svg"));}
+.csd > headerbar .linked.path-bar button.text-button:dir(rtl),
+.csd > headerbar .linked.path-bar button.text-button:dir(rtl):hover {
+background-repeat: no-repeat;
+background-position:right center;
+background-image:-gtk-scaled(url("img/dark_expander_side-rtl.svg"),url("img/dark_expander_side-rtl2.svg"));}
+.csd > headerbar .linked.path-bar button.text-button:backdrop {
+opacity:0.4;}
+.csd > headerbar.titlebar entry{
+color:@darktext;
+background:shade(@darkbg,0.2);}
+.csd > headerbar.titlebar entry:backdrop{
+color:@darkinactivetext;}

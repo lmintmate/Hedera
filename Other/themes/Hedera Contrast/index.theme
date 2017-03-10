@@ -1,0 +1,37 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Hedera Contrast
+Name[de]=Efeu (Kontrast)
+Name[ar]=(Contrast) اللبلاب
+Name[ca]=Heura (Contrast)
+Name[cs]=Břečťan (Contrast)
+Name[da]=Vedbend (Contrast)
+Name[el]=Κισσός (Contrast)
+Name[en]=Ivy (Contrast)
+Name[es]=Hiedra (Contraste)
+Name[fr]=Lierre (Contrast)
+Name[gd]=Eidheann (Contrast)
+Name[it]=Edera (Contrast)
+Name[ja]=ツタ (Contrast)
+Name[la]=Hedera (Contrast)
+Name[lu]=Wantergréng (Contrast)
+Name[nl]=Klimop (Contrast)
+Name[pt]=Hera (Contrast)
+Name[ru]=Плющ (Contrast)
+Name[sv]=Murgröna (Contrast)
+Name[zh]=常春藤 (Contrast)
+Comment=Dark titlebars and panels
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Hedera Contrast
+MetacityTheme=Hedera Contrast
+IconTheme=Hedera
+CursorTheme=Breeze
+CursorSize=24
+NotificationTheme=Slider
+MonospaceFont=Noto Mono 10
+ApplicationFont=Noto Sans 10
+DesktopFont=Noto Sans Bold 10
+BackgroundImage=/usr/share/themes/Hedera/basicwp.png
+ButtonLayout=:minimize,maximize,close

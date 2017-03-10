@@ -1,0 +1,105 @@
+* {
+  border: none;
+  font-family: "Noto Sans";
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #353232;
+}
+
+#frame {
+	padding: 5px;
+	border-radius: 5px;
+	border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+	background-color: #353232;
+	border: 1px solid #111111;
+  /* Workaround for Qt to get fixed size button*/
+	min-width:640px;
+	max-width:640px;
+}
+
+#inputLine {
+	font-size: 14px;
+	padding: 5px;
+	border: 1px solid #000000;
+	color: #ffffff;
+	selection-color: #ffffff;
+	selection-background-color: #ce99cd;
+	background-color: #171717;
+}
+
+#settingsButton {
+	color: #bbbbbb;
+	background-color: transparent;
+	padding: 15px;
+  /* Workaround for Qt to get fixed size button*/
+	min-width:14px;
+	min-height:14px;
+	max-width:14px;
+	max-height:14px;
+}
+
+/********** ListViews ************/
+
+QListView {
+	padding: 5px;
+	border-radius: 5px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	background-color: #171717;
+	border: 1px solid #111111;
+}
+
+QListView::item {
+    margin:1px;
+	border-radius: 5px;
+	background-color: #171717;
+}
+
+QListView::item:selected {
+	background-color: #ce99cd;
+	selection-background-color: #ce99cd;
+}
+
+QListView QScrollBar:vertical {
+	background: #171717;
+	border:none;
+}
+
+QListView QScrollBar::handle  {
+	background: #ce99cd;
+	width: 10px;
+	margin: 5px;
+	border-radius: 5px;
+	min-height: 24px;
+}
+
+QScrollBar::add-line:vertical {
+      border: transparent;
+      background: transparent;
+}
+
+QScrollBar::sub-line:vertical {
+      border: transparent;
+      background: transparent;
+}
+/********** actionList **********/
+
+QListView#actionList {
+	font-size: 12px;
+}
+
+QListView#actionList::item{
+	height:28px;
+}
+
+/********** proposalList **********/
+
+QListView#proposalList {
+	icon-size: 48px;
+	font-size: 12px;
+}
+
+QListView#proposalList::item{
+	height:56px;
+}

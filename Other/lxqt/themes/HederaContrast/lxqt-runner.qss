@@ -1,0 +1,28 @@
+#panel {
+	padding: 5px;
+	background:#363636;
+	border: 1px solid #111111;}
+
+#commandEd {
+	color:#9c9c9c;
+	font:bold;
+	border-color:rgba(255,255,255,0.05);
+	background-color: #171717;}
+
+#commandList {
+	border:1px solid palette(highlight);
+	padding:0px;
+	margin:0px;}
+
+#closeButton {
+	color:transparent;
+	qproperty-iconSize:22px;
+	border:none;
+	qproperty-icon: url(images/close.svg);}
+
+#actionButton {
+	padding:5px;
+    color:transparent;
+	qproperty-iconSize:22px;
+	border:none;
+	qproperty-icon: url(images/arrow_down.svg);}

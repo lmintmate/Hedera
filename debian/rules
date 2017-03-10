@@ -1,0 +1,72 @@
+#!/usr/bin/make -f
+
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+
+build-stamp:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	rm -rf debian/hedera
+	dh_clean
+
+install: build
+	if [ -f $(CURDIR)/debian/hedera*.deb ]; then \
+		rm -f $(CURDIR)/debian/hedera*.deb ;\
+	fi;
+	dh_testdir
+	dh_testroot
+	dh_prep  
+	dh_installdirs
+	mkdir -p $(CURDIR)/debian/hedera/usr/share
+#xdg/common stuff
+	cp -R $(CURDIR)/Other/* $(CURDIR)/debian/hedera/usr/share
+#plasma 5 stuff
+	cp -R $(CURDIR)/Plasma/* $(CURDIR)/debian/hedera/usr/share
+#debian config stuff
+	cp -R $(CURDIR)/Manual/Configs/* $(CURDIR)/debian/hedera
+#infopages kf5 compat
+	mkdir -p $(CURDIR)/debian/hedera/usr/share/kf5
+	cp -R $(CURDIR)/Manual/kf5/infopage $(CURDIR)/debian/hedera/usr/share/kf5/infopage.hedera
+#infopages kde4 compat
+	mkdir -p $(CURDIR)/debian/hedera/usr/share/kde4/apps/kdeui
+	cp -R $(CURDIR)/Manual/kf5/infopage $(CURDIR)/debian/hedera/usr/share/kde4/apps/kdeui/about.hedera
+#make the default wallpaper display on xfdesktop settings
+	mkdir -p $(CURDIR)/debian/hedera/usr/share/images/desktop-base ;\
+	ln -s ../../themes/Hedera/basicwp.png  $(CURDIR)/debian/hedera/usr/share/images/desktop-base/Hedera.png ;\
+#make the default wallpaper display on Mate settings
+	mkdir -p $(CURDIR)/debian/hedera/usr/share/backgrounds ;\
+	ln -s ../themes/Hedera/basicwp.png $(CURDIR)/debian/hedera/usr/share/backgrounds/Hedera.png ;\
+#scrollbars on chromium
+		mkdir -p $(CURDIR)/debian/hedera/usr/share/chromium/extensions
+		cp -R $(CURDIR)/Manual/Chromium/unpacked $(CURDIR)/debian/hedera/usr/share/chromium/extensions/hederascrollbars
+		mkdir -p $(CURDIR)/debian/hedera/etc/chromium.d
+		cp $(CURDIR)/Manual/Chromium/.hederascrollbars $(CURDIR)/debian/hedera/etc/chromium.d/hederascrollbars
+#firefox - extensions need now to be signed so this is killed...
+#		mkdir -p $(CURDIR)/debian/hedera/usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/hedera@ssfgh.com
+#		cp -r $(CURDIR)/Manual/Firefox/HederaDark/* $(CURDIR)/debian/hedera/usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/hedera@ssfgh.com/
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installchangelogs 
+	dh_fixperms
+	dh_compress
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+#since we build it locally and don't want to share it make this a bit bigger but faster
+#	dh_builddeb -- -Znone -Snone -z0
+	dh_builddeb -- -Zxz -Sextreme -z9 --uniform-compression
+	dh_clean
+	if [ -f $(CURDIR)/../hedera*.deb ]; then \
+		mv $(CURDIR)/../hedera*.deb $(CURDIR)/debian ;\
+	fi;
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

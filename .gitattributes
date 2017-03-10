@@ -1,0 +1,10 @@
+.gitattributes export-ignore  
+.gitignore export-ignore
+*.deb export-ignore
+*.rpm export-ignore
+.sync.sh export-ignore
+.synch-full.sh export-ignore
+pkgs/ export-ignore
+pkgs/* export-ignore
+pkgs/hedera-current_testing.deb export-ignore
+pkgs/hedera-current_tumbleweed.rpm export-ignore

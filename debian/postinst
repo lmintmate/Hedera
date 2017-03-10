@@ -1,0 +1,358 @@
+#!/bin/sh
+unset _question
+#set -xe
+### currently not needed since 3.20 and 3.22 are the same files!
+#printf "\n Trying to set the right GTK3 release...\n"
+#cd /usr/share/themes/Hedera
+#if [ -f /etc/SUSE-brand ]; then
+	#_gtk3ver=$(rpm -qi libgtk-3-0|grep -i ^Version|cut -d':' -f2|tr -d ' ')
+#else
+	#_gtk3ver=$(dpkg -s libgtk-3-0|grep -i version|cut -d' ' -f2)
+#fi
+#if [ -d "gtk-${_gtk3ver:0:4}.gresource" ];then
+	#printf "linking GTK3 theme to GTK3 version: ${_gtk3ver:0:4}\n"
+	#ln -sf "gtk-${_gtk3ver:0:4}.gresource" "gtk-3.0"
+#else
+	#printf "couldn't find a supported GTK3 release\n"
+#fi
+
+#since people are not allowed to have choices on rpm postinst scripts...
+rpmsaredumb() {
+	if [ ! -f /etc/debian_version ]; then
+		_question=y
+	fi
+}
+
+#set the distro icon - wont work with limited postinstall like rpm or packagekit
+if [ -f /etc/debian_version ]; then
+	printf "\n Trying to set the distro icon...\n"
+	cd /usr/share/icons/Hedera
+	_basedir=/usr/share/icons/Hedera
+	sh config.sh -i
+fi
+
+
+#some distributions force their own gtk3 theme and settings so make sure we 
+#replace them and use a more kde like setup
+unset _question
+if [ -f /etc/gtk-3.0/settings.ini.hedera ]; then
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Would you like to set the recommended GTK3 settings" --yesno "This will make Hedera the default GTK3 theme and it will change some GNOME-specific GTK settings.(Replaces: /etc/gtk-3.0/settings.ini)" 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF
+########################################################################
+## Would you like to set the recommended GTK3 settings? [N/y]
+########################################################################
+
+This will make Hedera the default GTK3 theme and it will remove some 
+GNOME-specific GTK settings.
+
+(Replaces: /etc/gtk-3.0/settings.ini)
+
+EOF
+		read _question
+	fi
+	rpmsaredumb
+	case $_question in
+		[Yy])
+			if [ -f /etc/gtk-3.0/settings.ini ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/gtk-3.0/settings.ini|cut -d: -f1)"
+				fi
+				mv -fv /etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini.hedera-bak 
+			fi
+			if [ -f /etc/xdg/gtk-3.0/settings.ini ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/xdg/gtk-3.0/settings.ini|cut -d: -f1)"
+				fi
+				mv -fv /etc/xdg/gtk-3.0/settings.ini /etc/xdg/gtk-3.0/settings.ini.hedera-bak
+			fi
+				ln -sf /etc/gtk-3.0/settings.ini.hedera /etc/gtk-3.0/settings.ini
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+#same for gtk2
+unset _question
+if [ -f /etc/gtk-2.0/gtkrc.hedera ]; then
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Would you like to set the recommended GTK2 settings" --yesno "This will make Hedera the default GTK2 theme and it will change some GNOME-specific GTK settings.(Replaces: /etc/gtk-2.0/gtkrc)" 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF
+########################################################################
+## Would you like to set the recommended GTK2 settings? [N/y]
+########################################################################
+
+This will make Hedera the default GTK2 theme and it will remove some
+GNOME-specific GTK settings.
+
+(Replaces: /etc/gtk-2.0/gtkrc)
+
+EOF
+		read _question
+	fi
+	rpmsaredumb
+	case $_question in
+		[Yy])
+			if [ -f /etc/gtk-2.0/gtkrc ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/gtk-2.0/gtkrc|cut -d: -f1)"
+				fi
+				mv -fv /etc/gtk-2.0/gtkrc /etc/gtk-2.0/gtkrc.hedera-bak 
+			fi
+			if [ -f /etc/xdg/gtk-2.0/gtkrc ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/xdg/gtk-2.0/gtkrc|cut -d: -f1)"
+				fi
+				mv -fv /etc/xdg/gtk-2.0/gtkrc /etc/gtk-2.0/gtkrc.hedera-bak
+			fi
+			ln -sf /etc/gtk-2.0/gtkrc.hedera /etc/gtk-2.0/gtkrc
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+#some weird distros force the qt style to GTK or qtcurve...
+unset _question
+if [ -f /etc/xdg/Trolltech.conf.hedera ]; then
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Would you like to set Breeze as the default Qt4 theme" --yesno "This will make Breeze the default Qt4 theme.(Replaces: /etc/xdg/Trolltech.conf)" 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF	
+########################################################################
+## Would you like to set Breeze as the default Qt4 theme? [N/y]
+########################################################################
+
+This will make Breeze the default Qt4 theme.
+
+(Replaces: /etc/xdg/Trolltech.conf)
+
+EOF
+		read _question
+	fi
+	rpmsaredumb
+	case $_question in
+		[Yy])
+			if [ -f /etc/xdg/Trolltech.conf ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/xdg/Trolltech.conf|cut -d: -f1)"
+				fi
+				mv -fv /etc/xdg/Trolltech.conf /etc/xdg/Trolltech.conf.hedera-bak
+			fi
+			ln -sf /etc/xdg/Trolltech.conf.hedera /etc/xdg/Trolltech.conf
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+#the usual complicated KDE way of changing themes...
+unset _question
+if [ -f /etc/xdg/breezerc.hedera ]; then
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Make Breeze more look like the GTK themes" --yesno 'This will change some settings in breeze to get in line with the GTK themes.(Replaces: /etc/xdg/breezerc, /etc/xdg/kwinrc)' 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF	
+########################################################################
+## Make Breeze more look like the GTK themes? [N/y]
+########################################################################
+
+This will change some settings in breeze to get in line with the GTK themes.
+(this will only work on machines without any KDE userconfigs)
+
+(Replaces: /etc/xdg/breezerc, /etc/xdg/kwinrc)
+
+EOF
+		read _question
+	fi
+	rpmsaredumb
+	case $_question in
+		[Yy])
+			if [ -f /etc/xdg/breezerc ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/xdg/breezerc|cut -d: -f1)"
+				fi
+				mv -fv /etc/xdg/breezerc /etc/xdg/breezerc.hedera-bak
+			fi
+			ln -sf /etc/xdg/breezerc.hedera /etc/xdg/breezerc
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+	case $_question in
+		[Yy])
+			if [ -f /etc/xdg/kwinrc ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/xdg/kwinrc|cut -d: -f1)"
+				fi
+				mv -fv /etc/xdg/kwinrc /etc/xdg/kwinrc.hedera-bak
+			fi
+			ln -sf /etc/xdg/kwinrc.hedera /etc/xdg/kwinrc
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+unset _question
+if [ -f /etc/xdg/kdeglobals.hedera ]; then
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Enable the KDE theme" --yesno "This will set the default KDE theme to Hedera, this is only recommended if you don't have qt5ct or KDE installed!(Replaces: /etc/xdg/kdeglobals)" 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF	
+########################################################################
+## Enable the KDE theme? [N/y]
+########################################################################
+
+This will set the default KDE theme to Hedera
+
+this is only recommended if you don't have qt5ct or KDE installed!
+
+(Replaces: /etc/xdg/kdeglobals)
+
+EOF
+		read _question
+	fi
+	rpmsaredumb
+	case $_question in
+		[Yy])
+			if [ -f /etc/xdg/kdeglobals ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /etc/xdg/kdeglobals|cut -d: -f1)"
+				fi
+				mv -fv /etc/xdg/kdeglobals /etc/xdg/kdeglobals.hedera-bak
+			fi
+			ln -sf /etc/xdg/kdeglobals.hedera /etc/xdg/kdeglobals
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+#replace the kde infopages(since they are not themeable)
+unset _question
+if [ -d /usr/share/kf5/infopage ]; then
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Would you like to replace the KDE/Plasma info pages" --yesno 'This will replace the Stylesheet for the KDE/Plasma infopages(Replaces: /usr/share/kf5/infopage, /usr/share/kde4/apps/kdeui/about)' 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF
+
+########################################################################
+## Would you like to replace the KDE/Plasma info pages? [N/y]
+########################################################################
+
+This will replace the Stylesheet for the KDE/Plasma infopages. Infopages are 
+used in:
+
+* Systemsettings classic view
+* Akregator
+* Khelpbrowser
+* Konqueror startpage
+* Skrooge
+
+and many more.
+
+(Replaces: /usr/share/kf5/infopage, /usr/share/kde4/apps/kdeui/about)
+
+EOF
+		read _question
+	fi
+	rpmsaredumb
+	case $_question in
+		[Yy])
+			if [ -f /etc/debian_version ]; then
+				_pkgs="$_pkgs $(dpkg -S /usr/share/kf5/infopage|cut -d: -f1)"
+			fi
+			mv -fv /usr/share/kf5/infopage /usr/share/kf5/infopage.hedera-bak
+			mv -fv /usr/share/kf5/infopage.hedera /usr/share/kf5/infopage
+			if [ -d /usr/share/kde4/apps/kdeui/about ]; then
+				if [ -f /etc/debian_version ]; then
+					_pkgs="$_pkgs $(dpkg -S /usr/share/kde4/apps/kdeui/about|cut -d: -f1)"
+				fi
+				mv -fv /usr/share/kde4/apps/kdeui/about /usr/share/kde4/apps/kdeui/about.hedera-bak
+				mv -fv /usr/share/kde4/apps/kdeui/about.hedera /usr/share/kde4/apps/kdeui/about
+			fi
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+#make Yast2 use hedera icons
+#if [ -L /usr/share/YaST2/theme/current/icons ]; then
+#	mv -fv /usr/share/YaST2/theme/current/icons /usr/share/YaST2/theme/current/icons.hedera-bak
+#	ln -s ../../../icons/Hedera /usr/share/YaST2/theme/current/icons
+#fi
+
+
+#ask to run the icon config script!
+if [ -f /etc/debian_version ]; then
+	unset _question
+	if type whiptail >/dev/null 2>&1; then
+		if (whiptail --title "Would you like to run the icon config script?" --yesno "Lets you change the distribution icon or the default folder colors" 8 78); then
+		 _question=y
+		fi
+	else
+		cat <<\EOF
+########################################################################
+## Would you like to run the icon config script? [N/y]
+########################################################################
+
+Lets you change the distribution icon or the default folder colors
+
+EOF
+		read _question
+	fi
+	case $_question in
+		[Yy])
+			sh /usr/share/icons/Hedera/config.sh
+		;;
+		*)
+			printf "skipped!\n"
+		;;
+	esac
+fi
+
+if [ ! -z ${_pkgs+x} ]; then
+	cat <<EOF
+
+
+
+
+
+
+
+########################################################################
+## Note:
+########################################################################
+
+You will probably need to reinstall this theme once you upgrade 
+one of the following packages:
+
+$(echo $_pkgs|tr ' ' '\n'|sort|uniq|tr '\n' ' ')
+
+EOF
+fi
+exit 0

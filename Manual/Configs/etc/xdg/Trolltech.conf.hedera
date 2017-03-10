@@ -1,0 +1,19 @@
+[Qt]
+style=Breeze
+
+[qt]
+GUIEffects=none
+KDE\contrast=0
+KWinPalette\activeBackground=#ce99cd
+KWinPalette\activeBlend=#ce99cd
+KWinPalette\activeForeground=#333333
+KWinPalette\activeTitleBtnBg=#ece8e2
+KWinPalette\frame=#ece8e2
+KWinPalette\inactiveBackground=#ece8e2
+KWinPalette\inactiveBlend=#ece8e2
+KWinPalette\inactiveForeground=#a5a5a5
+KWinPalette\inactiveFrame=#ece8e2
+KWinPalette\inactiveTitleBtnBg=#ece8e2
+Palette\active=#333333, #fafafa, #ffffff, #f8f6f4, #55514c, #bcb4a8, #333333, #ffffff, #333333, #fcfcfc, #ece8e2, #2d2b28, #ce99cd, #333333, #2980b9, #bdc3c7, #fcfcfc, #333333, #fbf3c9, #333333
+Palette\disabled=#9b9995, #dcdcdc, #ffffff, #e2dcd2, #4a4742, #a8a196, #a6a6a6, #ffffff, #a5a5a5, #dddddd, #d4cbbe, #2c2a27, #d4cbbe, #9b9995, #9ac5df, #cdd1d4, #dddddd, #333333, #fbf3c9, #333333
+Palette\inactive=#333333, #fafafa, #ffffff, #f8f6f4, #55514c, #bcb4a8, #333333, #ffffff, #333333, #fcfcfc, #ece8e2, #2d2b28, #ce99cd, #333333, #2980b9, #bdc3c7, #fcfcfc, #333333, #fbf3c9, #333333

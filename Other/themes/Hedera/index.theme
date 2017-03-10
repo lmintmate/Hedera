@@ -1,0 +1,37 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Hedera
+Name[ar]=اللبلاب
+Name[ca]=Heura
+Name[cs]=Břečťan
+Name[da]=Vedbend
+Name[de]=Efeu
+Name[en]=Ivy
+Name[el]=Κισσός
+Name[es]=Hiedra
+Name[fr]=Lierre
+Name[gd]=Eidheann
+Name[it]=Edera
+Name[ja]=ツタ
+Name[la]=Hedera
+Name[lu]=Wantergréng
+Name[nl]=Klimop
+Name[pt]=Hera
+Name[ru]=Плющ
+Name[sv]=Murgröna
+Name[zh]=常春藤
+Comment=100% compatible with KDE Breeze
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Hedera
+MetacityTheme=Hedera
+IconTheme=Hedera
+CursorTheme=Breeze
+CursorSize=24
+NotificationTheme=Slider
+MonospaceFont=Noto Mono 10
+ApplicationFont=Noto Sans 10
+DesktopFont=Noto Sans Bold 10
+BackgroundImage=/usr/share/themes/Hedera/basicwp.png
+ButtonLayout=:minimize,maximize,close
